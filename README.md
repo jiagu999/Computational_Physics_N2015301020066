@@ -1,1 +1,14 @@
-# Computational_Physics_N2015301020066
+Homework list
+- [x] Exercise_03:All levels
+- [x] Exercise_04:Chapter 1 problem 1.5:The decay of two kinds of particles
+- [x] Exercise_05:Chapter 1 problem 1.6:Population growth
+- [x] Exercise_06:Chapter 2 problem 2.9
+- [x] Exercise_07:
+- [x] Exercise_08:
+- [x] Exercise_09:
+- [x] Exercise_10:
+- [x] Exercise_11:
+- [x] Exercise_12:
+- [x] Exercise_13:
+- [x] Exercise_14:
+- [x] Final Project:用轨道能量分析Kirkwood Gap的缝宽
