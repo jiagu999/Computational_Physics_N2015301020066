@@ -1,33 +1,24 @@
-
-highway_image_name="highway.jpg"
-car_image_name="car.png"
-
-
 import pygame
-
 from pygame.locals import *
 from sys import exit
 pygame.init()
-
+highway_image_name="highway.jpg"
+car_image_name="car.png"
 screen=pygame.display.set_mode((640, 480), 0, 32)
 pygame.display.set_caption("Little Case")
-
 highway= pygame.image.load(highway_image_name).convert()
 car=pygame.image.load(car_image_name).convert_alpha()
 
 x=0
 y=300
-
-while True:
-    
-    for event in pygame.event.get():
-        if event.type==QUIT:
-            pygame.display.quit()
-            exit()
-
 x+=0.2
 if x>640+car.get_width():
     x=-car.get_with
     screen.blit(highway, (0, 0))
     screen.blit(car, (x, y))
     pygame.display.update()
+while True:
+    for event in pygame.event.get():
+        if event.type==pygame.QUIT:
+            pygame.quit()
+            exit()
