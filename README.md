@@ -1,4 +1,5 @@
 ## Homework list
+- [x] [Exercise_2:平动]()
 - [x] [Exercise_03:All levels](https://github.com/jiagu999/Computational_Physics_N2015301020066/blob/master/excercise%202)
 - [x] Exercise_04:Chapter 1 problem 1.5:The decay of two kinds of particles
 - [x] Exercise_05:Chapter 1 problem 1.6:Population growth
