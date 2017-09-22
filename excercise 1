@@ -1,0 +1,36 @@
+highway_image_name="highway.jpg"
+car_image_name="car.png"
+
+
+import pygame
+
+from pygame.locals import *
+
+pygame.init()
+
+screen=pygame.display.set_mode((640, 480), 0, 32)
+pygame.display.set_caption("Little Case")
+
+highway= pygame.image.load(highway_image_name).convert()
+car=pygame.image.load(car_image_name).convert_alpha()
+
+x=0
+y=300
+z=1
+my_font=pygame.font.SysFont("arial", 16)
+text_surface=my_font.render(("%d car" % (z)), True, (0, 0, 255))
+
+while True:
+    
+    for event in pygame.event.get():
+        if event.type==QUIT:
+            pygame.display.quit()
+            exit()
+
+x+=0.2
+if x>640+car.get_width():
+    x=-car.get_with
+    screen.blit(highway, (0, 0))
+    screen.blit(text_surface, (620 - text_surface.get_width(), text_surface.get_height()))
+    screen.blit(car, (x, y))
+    pygame.display.update()
