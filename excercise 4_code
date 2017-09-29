@@ -10,7 +10,7 @@ def plot():
     v=[inital_v]
     t=[0]
     for i in range(nsteps):
-        tmp=v[i]+g*dt
+        tmp=v[i]-g*dt
         v.append(tmp)
         t.append(t[i]+dt)   
     pl.plot(t,v)
@@ -18,6 +18,6 @@ def plot():
     pl.xlabel('t(s) axis')
     pl.ylabel('v(m/s) axis')
     pl.xlim(0.0,10)
-    pl.ylim(0.00,100.00)
+    pl.ylim（-100.00，0.00)
     pl.show()
 plot()
