@@ -1,7 +1,7 @@
 ## Homework list
 - [x] [Exercise_2:平动](https://github.com/jiagu999/Computational_Physics_N2015301020066/blob/master/%E4%BD%9C%E4%B8%9A1.md)
 - [x] [Exercise_03:All levels](https://github.com/jiagu999/Computational_Physics_N2015301020066/blob/master/excercise%202)
-- [x] Exercise_04:Chapter 1 problem 1.5:The decay of two kinds of particles
+- [x] [Exercise_04:Chapter 1 problem 1.5](https://github.com/jiagu999/Computational_Physics_N2015301020066/edit/master/excercise%204.md)
 - [x] Exercise_05:Chapter 1 problem 1.6:Population growth
 - [x] Exercise_06:Chapter 2 problem 2.9&2.10:The cannon
 - [x] Exercise_07:Chapter 2 problem 2.19:The spin of baseball and Visual motion of baseball
