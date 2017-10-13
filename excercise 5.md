@@ -8,3 +8,4 @@
 - 运行结果![](https://i.loli.net/2017/10/13/59e0e19f7fb6e.png)
 ### 结论
 - 加上空气阻力及海拔对空气阻力的改变后，炮弹发射的最全距离的角度再![](http://latex.codecogs.com/gif.latex?40^{\circ}\sim&space;45^{\circ})范围内
+最后细分角度测量落点距离最大值时角度为43.4度，距离为24.53km。
