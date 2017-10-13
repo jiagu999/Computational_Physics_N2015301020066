@@ -1,0 +1,144 @@
+import numpy as np
+import pylab as pl
+from math import pi,cos,sin
+v = 700
+g = 9.8
+x = 0
+y = 0
+dt = 0.5
+k = 4*10**-5
+a = 6.5*10**-3
+alpha = 2.5
+T = 300
+o = 30
+vy=sin(pi*o/180)*v
+vx=cos(pi*o/180)*v
+X1 = [0]
+Y1 = [0]
+while y>=0:
+    x = x + vx*dt
+    vx = vx - k*(1-a*y/T)**alpha*v*vx*dt
+    y = y + vy*dt
+    vy = vy - g*dt -k*(1-a*y/T)**alpha*v*vy*dt
+    v = (vx**2 + vy**2)**0.5
+    X1.append(x)
+    Y1.append(y)
+v = 700
+g = 9.8
+x = 0
+y = 0
+o=35    
+vy=sin(pi*o/180)*v
+vx=cos(pi*o/180)*v
+X2 = [0]
+Y2 = [0]
+while y>=0:
+    x = x + vx*dt
+    vx = vx - k*(1-a*y/T)**alpha*v*vx*dt
+    y = y + vy*dt
+    vy = vy - g*dt -k*(1-a*y/T)**alpha*v*vy*dt
+    v = (vx**2 + vy**2)**0.5
+    X2.append(x)
+    Y2.append(y)
+v = 700
+g = 9.8
+x = 0
+y = 0
+o=40
+vy=sin(pi*o/180)*v
+vx=cos(pi*o/180)*v
+X3 = [0]
+Y3 = [0]
+while y>=0:
+    x = x + vx*dt
+    vx = vx - k*(1-a*y/T)**alpha*v*vx*dt
+    y = y + vy*dt
+    vy = vy - g*dt -k*(1-a*y/T)**alpha*v*vy*dt
+    v = (vx**2 + vy**2)**0.5
+    X3.append(x)
+    Y3.append(y)
+v = 700
+g = 9.8
+x = 0
+y = 0
+o=45
+vy=sin(pi*o/180)*v
+vx=cos(pi*o/180)*v
+X4 = [0]
+Y4 = [0]
+while y>=0:
+    x = x + vx*dt
+    vx = vx - k*(1-a*y/T)**alpha*v*vx*dt
+    y = y + vy*dt
+    vy = vy - g*dt -k*(1-a*y/T)**alpha*v*vy*dt
+    v = (vx**2 + vy**2)**0.5
+    X4.append(x)
+    Y4.append(y)
+v = 700
+g = 9.8
+x = 0
+y = 0
+o=50
+vy=sin(pi*o/180)*v
+vx=cos(pi*o/180)*v
+X5 = [0]
+Y5 = [0]
+while y>=0:
+    x = x + vx*dt
+    vx = vx - k*(1-a*y/T)**alpha*v*vx*dt
+    y = y + vy*dt
+    vy = vy - g*dt -k*(1-a*y/T)**alpha*v*vy*dt
+    v = (vx**2 + vy**2)**0.5
+    X5.append(x)
+    Y5.append(y)
+v = 700
+g = 9.8
+x = 0
+y = 0
+o=55
+vy=sin(pi*o/180)*v
+vx=cos(pi*o/180)*v
+X6 = [0]
+Y6 = [0]
+while y>=0:
+    x = x + vx*dt
+    vx = vx - k*(1-a*y/T)**alpha*v*vx*dt
+    y = y + vy*dt
+    vy = vy - g*dt -k*(1-a*y/T)**alpha*v*vy*dt
+    v = (vx**2 + vy**2)**0.5
+    X6.append(x)
+    Y6.append(y)
+v = 700
+g = 9.8
+x = 0
+y = 0
+o=60
+vy=sin(pi*o/180)*v
+vx=cos(pi*o/180)*v
+X7 = [0]
+Y7 = [0]
+while y>=0:
+    x = x + vx*dt
+    vx = vx - k*(1-a*y/T)**alpha*v*vx*dt
+    y = y + vy*dt
+    vy = vy - g*dt -k*(1-a*y/T)**alpha*v*vy*dt
+    v = (vx**2 + vy**2)**0.5
+    X7.append(x)
+    Y7.append(y)    
+def plot():
+    pl.plot(X1,Y1,'r',label='angle=30')
+    pl.plot(X2,Y2,'b',label='angle=35')
+    pl.plot(X3,Y3,'g',label='angle=40')
+    pl.plot(X4,Y4,'c',label='angle=45')
+    pl.plot(X5,Y5,'m',label='angle=50')
+    pl.plot(X6,Y6,'y',label='angle=55')
+    pl.plot(X7,Y7,'k',label='angle=60')
+    pl.title('trajectory of cannon shell')
+    pl.xlabel('x axis')
+    pl.ylabel('y axis')
+    pl.xlim(0,30000)
+    pl.ylim(0,30000)
+    pl.legend()
+    
+    pl.show()
+plot()        
