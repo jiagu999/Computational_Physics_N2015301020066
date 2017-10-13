@@ -3,7 +3,7 @@
 - [x] [Exercise_03:All levels](https://github.com/jiagu999/Computational_Physics_N2015301020066/blob/master/excercise%202)
 - [x] [Exercise_04:Chapter 1 problem 1.5](https://github.com/jiagu999/Computational_Physics_N2015301020066/edit/master/excercise%204.md)
 - [x] Exercise_05:Chapter 1 problem 1.6:Population growth
-- [x] Exercise_06:Chapter 2 problem 2.9&2.10:The cannon
+- [x] [Exercise_06:Chapter 2 problem 2.9&2.10:The cannon](https://github.com/jiagu999/Computational_Physics_N2015301020066/blob/master/excercise%205.md)
 - [x] Exercise_07:Chapter 2 problem 2.19:The spin of baseball and Visual motion of baseball
 - [x] Exercise_08:Chapter 3 problem 3.4:Non-linear oscillator
 - [x] Exercise_09:Chapter 3 problem 3.16:Strange attractor
