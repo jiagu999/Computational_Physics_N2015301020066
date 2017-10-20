@@ -1,5 +1,5 @@
 # Exercise 6:The spin of baseball
-#Problem
+## Problem
 - 2.19.Model the effect of backspin on the range of a batted ball.Assume an angular velocity of 2000 rpm.
 ## 摘要
 - 棒球的运动轨迹受空气牵扯力，以及棒球自旋受到的Magnus力的影响，使得球的轨迹十分复杂。
@@ -14,3 +14,5 @@
 |最远距离  |113m     |119.5m  |
 ## 运动轨迹对比
 ![](https://i.loli.net/2017/10/20/59e9ebbfa2959.png)
+## 小结
+- 本次作业讨论了棒球的运动问题，讨论了棒球所受空气阻力和Magnus力对棒球运动的影响。其中前者的影响极为显著，将很大地减少棒球的射程，明显地改变棒球的轨迹，而后者也有不小的影响，如果棒球旋转适当，可以朝不同的方向发生偏移，因而给棒球运动带来很大的不确定性和娱乐性。
