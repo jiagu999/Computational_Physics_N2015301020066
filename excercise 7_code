@@ -1,1 +1,48 @@
 
+import numpy as np
+import pylab as pl
+from math import log,sin
+w_1,w_2 = 0,0
+g = 9.8
+l = 9.8
+F_D = 1.2
+omega = 2/3
+t = 0
+q = 0.5
+dt = 0.04
+heta_1 = 0.200
+T = [0]
+heta_2 = 0.201
+Heta = [log(0.001)/log(10)]
+while 1:
+    w_1 = w_1+(-(g/l)*sin(heta_1)-q*w_1+F_D*sin(omega*t))*dt
+    heta_1 = heta_1 +w_1*dt
+    w_2 = w_2+(-(g/l)*sin(heta_2)-q*w_2+F_D*sin(omega*t))*dt
+    heta_2 = heta_2 +w_2*dt
+    heta = log(abs(heta_2-heta_1))/log(10)
+    Heta.append(heta)
+    t = t+dt
+    T.append(t)
+    if t>80:
+        break
+c = 0.03
+t = 0
+m = -2.991
+M = [-2.991]
+while t<=80:
+    m = m+c*dt
+    t = t+dt
+    M.append(m)
+def plot():
+    pl.plot(T,Heta,'r',label='F_D = 1.2')
+    pl.plot(T,M,'--')
+    pl.title('chaos in pendulum')
+    pl.xlabel('x axis')
+    pl.ylabel('y axis')
+    pl.xlim(0.0,80)
+    pl.ylim(-7,7)
+    pl.legend()
+    pl.show()
+plot()    
+
+    
