@@ -1,0 +1,51 @@
+import numpy as np
+import pylab as pl
+from math import sin,pi,sqrt,atan
+e = 0.17
+M = 4*pi*pi
+x = 0.309
+y = 0
+a = 0.309/(1-e)
+vx = 0
+vy = sqrt(M*(1+e)/(a*(1-e)))
+t = 0
+dt = 0.0001
+X = [x]
+Y = [y]
+T = []
+r = sqrt(x*x+y*y)
+A = 0.01
+x_list = []
+y_list = []
+R = [0,1]
+Theta = []
+t_list = [0]
+while t<=2:
+    X.append(x)
+    Y.append(y)
+    T.append(t)
+    R.append(r)
+    vx = vx-M*x*dt*(1+A/r**2)/r**3
+    vy = vy-M*y*dt*(1+A/r**2)/r**3
+    t = t+dt
+    x = x+vx*dt
+    y = y+vy*dt
+    r = sqrt(x*x+y*y)
+    if R[-3]>R[-2] and R[-1]>R[-2]:
+        x_list.append(X[-2])
+        y_list.append(Y[-2])
+        t_list.append(T[-2])
+        pl.plot([0,x_list[-1]],[0,y_list[-1]],'y')
+        theta = atan(y_list[-1]/x_list[-1])
+        if y<0:
+            theta = theta+pi
+        Theta.append(theta)
+def plot():
+    pl.plot(X,Y,'y',label='e = 0.17')
+    pl.title('simulattion of the precession of e=0.17 ')
+    pl.xlabel('x axis')
+    pl.ylabel('y axis')
+    pl.xlim(-0.5,0.5)
+    pl.ylim(-0.5,0.5)
+    pl.show()
+plot()  
