@@ -1,0 +1,42 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+x = np.arange(1,30)
+y = np.arange(1,30)
+v =np.zeros((31,31))
+X,Y = np.meshgrid(x,y)
+for i in np.arange(13,18):
+    for j in np.arange(13,18):
+        v[i,j] = 1
+delta_v = np.zeros((30,30))
+a_n = v.copy()
+a_o = v.copy()
+V = 1
+while V>0.00841:
+    V = 0
+
+    for i in np.arange(1,30):
+        if i>12 and i<18:
+            for j in np.arange(1,13):
+                a_n[i,j] = (a_o[i+1,j]+a_o[i-1,j]+a_o[i,j+1]+a_o[i,j-1])/4
+                V = V+abs(a_n[i,j]-a_o[i,j])
+            for j in np.arange(18,30):
+                a_n[i,j] = (a_o[i+1,j]+a_o[i-1,j]+a_o[i,j+1]+a_o[i,j-1])/4
+                V = V+abs(a_n[i,j]-a_o[i,j])
+        if i>17 or i<13:
+            for j in np.arange(1,30):
+                a_n[i,j] = (a_o[i+1,j]+a_o[i-1,j]+a_o[i,j+1]+a_o[i,j-1])/4
+                V = V+abs(a_n[i,j]-a_o[i,j])
+    a_o = a_n.copy()
+def f(m,n):
+    return a_o[m,n]
+
+U,V = (-f(X,Y)+f(X-1,Y)),(-f(X,Y)+f(X,Y-1))
+
+plt.quiver(X,Y,U,V, edgecolor='k', facecolor='None', linewidth=.5)
+
+plt.xlim(0,30), plt.xticks([])
+plt.ylim(0,30), plt.yticks([])
+
+# savefig('../figures/quiver_ex.png',dpi=48)
+plt.show()
