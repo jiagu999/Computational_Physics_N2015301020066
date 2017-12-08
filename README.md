@@ -10,6 +10,6 @@
 - [x] Exercise_10:Chapter 3 problem 3.31:Billbard ball on diverse table
 - [x] [Exercise_11:Chapter 4 problem 4.11:The percession of Mercury](https://www.zybuluo.com/mdeditor#971341)
 - [x] Exercise_12:Chapter 4 problem 4.18:The Kirkwood Gap
-- [x] [Exercise_13:Chapter 5 problem 5.7:The Jacobi method v.s. The SOR algorithm](http://www.z4a.net/images/2017/12/08/Figure_1-2.png)
+- [x] [Exercise_13:Chapter 5 problem 5.7:The Jacobi method v.s. The SOR algorithm](https://www.zybuluo.com/95279527qsb/note/979532)
 - [x] Exercise_14:Chapter 6 problem 6.15:The realistic string problem
 - [x] Final Project:用轨道能量分析Kirkwood Gap的缝宽
