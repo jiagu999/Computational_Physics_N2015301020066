@@ -1,0 +1,54 @@
+import numpy as np
+import matplotlib.pyplot as plt
+def y(x):
+    yo = np.zeros(101)
+    yc = yo.copy()
+    yn = yo.copy()
+    for i in np.arange(1,100):
+        yo[i] = np.exp(-1000*(i/100-0.3)**2)
+    yc = yo.copy()
+    dt = 1/30000
+    t = 0+dt
+    while t<x:
+        for i in np.arange(1,100):
+            yn[i] = -yo[i]+yc[i+1]+yc[i-1]
+        yn[0] = 2*yc[0]-yo[0]+yc[1]-yc[0]
+        yn[100] = 2*yc[100]-yo[100]+yc[99]-yc[100]
+        t = t+dt
+        yo = yc.copy()
+        yc = yn.copy()
+    return yc
+for i in np.arange(0,101):
+
+    T=i*0.01/300
+
+    fig=plt.figure()
+
+    ax=plt.axes([0.1,0.2,0.8,0.7])
+
+
+
+    X=np.linspace(0,1,101)
+
+
+
+    ax.plot(X,y(T)[np.arange(0,101)],label='time=%.2f(ms)'%(T*1000))
+
+    ax.set_ylim(0,1.1)
+
+    ax.set_xlim(0,1)
+
+    ax.set_xlabel("x(m)")
+
+    ax.set_ylabel("y(m)")
+
+    ax.set_title("wave on a string")
+
+    ax.legend(loc='best')
+
+    plt.savefig(r'd:\save'+'%.2f'%(T*1000)+r'.jpg')
+
+    
+    
+
+
